@@ -1,4 +1,5 @@
 /node_modules
+/allure-results
 /allure-reports
 /package-lock.json
 # Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
@@ -164,4 +165,3 @@ dist
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
-/allure-results
