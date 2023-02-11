@@ -1,6 +1,5 @@
-//since header has a sidemenu bar. we should also define separate class for it
 class SideMenu {
-    constructor() { //here we have to keep emtpy constructor. just for constructor sake
+    constructor() { 
     } 
 
     get subtitleContact(){
@@ -16,7 +15,7 @@ class SideMenu {
     }
     
     get textBoxAppVersion(){
-        return browser.$('div.appVersion'); // Homework
+        return browser.$('div.appVersion'); 
     }
 
     async menuOption(option){
@@ -30,4 +29,3 @@ class SideMenu {
 }
 
 module.exports = SideMenu;
-//Go back to header

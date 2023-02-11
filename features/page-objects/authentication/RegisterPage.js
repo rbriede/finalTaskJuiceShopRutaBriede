@@ -28,6 +28,10 @@ class RegisterPage extends BasePage {
     get selectionSecurityQuestion() {
         return browser.$('[name="securityQuestion"]');
     }
+
+    get selectionSecurityQuestionElderSibling() {
+        return browser.$('//span[contains(text(),"Your eldest siblings middle name?")]');
+    }
     
     get inputAnswer(){
         return browser.$('#securityAnswerControl');
@@ -36,23 +40,27 @@ class RegisterPage extends BasePage {
     get buttonRegister(){
         return browser.$('button#registerButton');
     }
+
+    get messageEmailMustBeUnique(){
+        return browser.$('//div[@class="error"]');
+    }
     
-    get linkLogin(){
+    get alreadyACustomerLoginLink(){
         return browser.$('href="#/login"');
     }
 
-    get securityAnswerReadyForInput(){
-        return browser.$('[placeholder="Answer to your security question"]');
-    }
+    // get securityAnswerReadyForInput(){
+    //     return browser.$('[placeholder="Answer to your security question"][normalize-space(text())=" Your eldest siblings middle name?"]');
+    // }
 
-    async optionSecurityQuestion(option) {
-        let element = await browser.$(`//span[@class="mat-option-text"][normalize-space(text())="${option}"]`);
-        return element;
-    }//or define as async function
+    // async optionSecurityQuestion(option) {
+    //     let element = await browser.$(`//span[@class="mat-option-text"][normalize-space(text())="${option}"]`);
+    //     return element;
+    // }
 
-    async optionSecurityQuestionText(option){
-        return browser.$(`//*[@name="securityQuestion"] //*[contains(@class, "ng-star-inserted")]//span[contains(text(), '${option}')]`);
-    }
+    // async optionSecurityQuestionText(option){
+    //     return browser.$(`//*[@name="securityQuestion"] //*[contains(@class, "ng-star-inserted")]//span[contains(text(), '${option}')]`);
+    // }
 }
 
 module.exports = RegisterPage;

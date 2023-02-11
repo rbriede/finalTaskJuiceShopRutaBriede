@@ -40,9 +40,10 @@ class LoginPage extends BasePage {
         return browser.$('[for="rememberMe-input"]');
     }
 
-    get linkRegister() {
+    get notYetACustomerRegister() {
         return browser.$('[href="#/register"]');
     }
+
 }
 
 module.exports = LoginPage;

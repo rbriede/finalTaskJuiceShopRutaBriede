@@ -1,6 +1,6 @@
 class Footer {
     constructor() {
-         // Homework
+         
     }
 
     get title(){
@@ -12,14 +12,14 @@ class Footer {
     }
     
     get paginationSelectionPageSize(){
-        browser.$('[aria-label="Items per page:"'); // Homework
+        browser.$('[aria-label="Items per page:"');
     }
 
     get paginationTextBoxItemsInPage(){
-        return browser.$('div.mat-paginator-range-label'); // Homework
+        return browser.$('div.mat-paginator-range-label');
     }
     
-    get paginationPrevPage() {// Homework
+    get paginationPrevPage() {
         browser.$('path[d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"]'); 
     }
     
@@ -30,4 +30,3 @@ class Footer {
 
 module.exports = Footer;
 
-//Go back to basePage

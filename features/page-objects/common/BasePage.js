@@ -1,44 +1,29 @@
-//1. first do regular class
-//class BasePage {
-//and do all the other stuff
-//}
-
-//at the end add export
-
-//we have to import header from relative path
 const Header = require('./Header');
 const Footer = require('./Footer');
 
-//import {Footer} from './Footer'
-
 class BasePage {
-
-    //we add constructor function so on class object creation it comes with given properties thawt will be elements or some other part of the page
+   
     constructor() {
-    //we know that each page has a header and footer
-    //we have to import header from relative path
-    //And now define header 
-    this.header = new Header(); //go to header and define it
-    //the same with footer
+    
+    this.header = new Header();
+    
     this.footer = new Footer();
-    //#cookieconsent:desc
-    }
 
-    //curretly we don't know about any function that we could use so no methods here
+    }
 
     get buttonDismissPopUp() {
-        return browser.$('//span[text() = "Dismiss"]'); // this.buttonDismissPopUp = () => browser.$('//span[text() = "Dismiss"]');
+        return browser.$('//span[text() = "Dismiss"]');
     }
   
-    get buttonDismissCookies(){
+    get buttonDismissCookies() {
         return browser.$('[aria-label="dismiss cookie message"]');
     }
     
-    get popUpReloadAfterLangChange(){
+    get popUpReloadAfterLangChange() {
         return browser.$('//*[text()="Force page reload"]')
     }
 
-    get popUpAfterLanguageChange(){
+    get popUpAfterLanguageChange() {
         return browser.$('.mat-simple-snack-bar-content');
     }
 
