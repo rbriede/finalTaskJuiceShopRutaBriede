@@ -2,6 +2,7 @@ const { When } = require('@wdio/cucumber-framework');
 const BasePage = require('../page-objects/common/BasePage');
 const LoginPage = require('../page-objects/authentication/LoginPage');
 const RegisterPage = require('../page-objects/authentication/RegisterPage');
+
 When(/^I have registered account$/, async function() {
     this.basePage = new BasePage();
     this.loginPage = new LoginPage();

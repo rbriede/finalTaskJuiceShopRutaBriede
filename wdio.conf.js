@@ -23,8 +23,8 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        "./features/**/*.feature"
-        // "./features/**/*.feature"
+        "./features/**/Scenario1.feature"
+        // "./features/**/Scenario2.feature"
         // "./features/**/*.feature"
         // ToDo: define location for spec files here
     ],
