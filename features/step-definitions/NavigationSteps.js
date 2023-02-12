@@ -55,8 +55,10 @@ When(/^I click on 'My payment Options' option$/, async function() {
     await this.basePage.header.buttonPaymentOptions.click();
 });
 
-When(/^I click on 'My payment Options' option$/, async function() {
+When(/^I click on 'My Saved Addresses' option$/, async function() {
     this.basePage = new BasePage();
-    await this.basePage.header.buttonPaymentOptions.waitForDisplayed();
-    await this.basePage.header.buttonPaymentOptions.click();
+    await this.basePage.header.buttonSavedAddresses.waitForDisplayed();
+    await this.basePage.header.buttonSavedAddresses.click();
 });
+
+

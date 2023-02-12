@@ -42,4 +42,5 @@ When(/^I see confirmation message about card info$/, async function() {
     let element = await this.savedPaymentMethodsPage.confirmationMessageAboutCardInfo;
     expect(element).toExist();
     await expect(element).toHaveTextContaining("Your card ending with 5678 has been saved for your convenience.");
+    await this.savedPaymentMethodsPage.confirmationMessageAboutCardInfo.waitForDisplayed({ reverse: true })
 });

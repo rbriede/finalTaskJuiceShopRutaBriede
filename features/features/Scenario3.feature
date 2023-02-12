@@ -11,6 +11,7 @@ Feature: Scenario 3
             | Name         | Card Number      | Expiry Month | Expiry year |
             | John Goodman | 1234567812345678 |            4 |        2085 |
         And I see confirmation message about card info
+        And I press on Account button
         And I click on 'Orders and Payment' option
         And I click on 'My Saved Addresses' option
         And I click on new Address button
