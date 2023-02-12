@@ -11,8 +11,8 @@ When(/^I open landing page$/, async function() {
     await this.basePage.buttonDismissPopUp.click();
     await this.basePage.buttonDismissCookies.waitForDisplayed();
     await this.basePage.buttonDismissCookies.click();
-    await this.basePage.popUpReloadAfterLangChange.waitForDisplayed();
-    await this.basePage.popUpReloadAfterLangChange.waitForDisplayed({reverse: true});    
+    // await this.basePage.popUpReloadAfterLangChange.waitForDisplayed();
+    // await this.basePage.popUpReloadAfterLangChange.waitForDisplayed({reverse: true});    
 });
 
 When(/^I press on Account button$/, async function() {
@@ -47,6 +47,12 @@ When(/^I click on 'Orders and Payment' option$/, async function() {
     this.basePage = new BasePage();
     await this.basePage.header.buttonOrdersAndPayment.waitForDisplayed();
     await this.basePage.header.buttonOrdersAndPayment.click();
+});
+
+When(/^I click on 'My payment Options' option$/, async function() {
+    this.basePage = new BasePage();
+    await this.basePage.header.buttonPaymentOptions.waitForDisplayed();
+    await this.basePage.header.buttonPaymentOptions.click();
 });
 
 When(/^I click on 'My payment Options' option$/, async function() {
