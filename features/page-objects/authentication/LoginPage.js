@@ -24,9 +24,9 @@ class LoginPage extends BasePage {
         return browser.$('#password');
     }
     
-    get linkForgotPasword() {
-        return browser.$('[href="#/forgot-password"]');
-    }
+    // get linkForgotPasword() {
+    //     return browser.$('[href="#/forgot-password"]');
+    // }
     
     get buttonLogIn() {
         return browser.$('button#loginButton span.mat-button-wrapper');
