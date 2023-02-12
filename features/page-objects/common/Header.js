@@ -53,6 +53,35 @@ class Header {
     get selectionLanguage(){
         return browser.$('//mat-icon[contains(text(),"language")]');
     }
+
+    get buttonOrdersAndPayment(){
+        return browser.$('//button[@aria-label="Show Orders and Payment Menu"]');
+    }
+
+    get buttonPrivacyAndSecurity(){
+        return browser.$('//button[@aria-label="Show Privacy and Security Menu"]');
+    }
+
+    get buttonOrderHistory(){
+        return browser.$('//button[@aria-label="Go to order history page"]');
+    }
+
+    get buttonRecycle(){
+        return browser.$('//button[@aria-label="Go to recycling page"]');
+    }
+
+    get buttonSavedAddresses(){
+        return browser.$('//button[@aria-label="Go to saved address page"]');
+    }
+
+    get buttonPaymentOptions(){
+        return browser.$('//button[@aria-label="Go to saved payment methods page"]');
+    }
+
+    get buttonDigitalWallet(){
+        return browser.$('//button[@aria-label="Go to wallet page"]');
+    }
 }
 
 module.exports = Header;
+

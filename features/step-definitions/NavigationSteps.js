@@ -42,3 +42,15 @@ When(/^I am in register page$/, async function() {
     this.registerPage = new RegisterPage();
     await this.registerPage.title.waitForDisplayed();
 });
+
+When(/^I click on 'Orders and Payment' option$/, async function() {
+    this.basePage = new BasePage();
+    await this.basePage.header.buttonOrdersAndPayment.waitForDisplayed();
+    await this.basePage.header.buttonOrdersAndPayment.click();
+});
+
+When(/^I click on 'My payment Options' option$/, async function() {
+    this.basePage = new BasePage();
+    await this.basePage.header.buttonPaymentOptions.waitForDisplayed();
+    await this.basePage.header.buttonPaymentOptions.click();
+});
