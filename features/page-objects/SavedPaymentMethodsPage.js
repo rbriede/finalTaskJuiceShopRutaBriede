@@ -10,7 +10,7 @@ class SavedPaymentMethodsPage extends BasePage {
     }
 
     get optionAddNewCard() {
-        return browser.$('//span[contains(@class,"mat-content ng-tns-c149-36")]');
+        return browser.$('#mat-expansion-panel-header-0');
     }
 
     get inputNameOnCard() {
@@ -47,3 +47,5 @@ class SavedPaymentMethodsPage extends BasePage {
 }
 
 module.exports = SavedPaymentMethodsPage;
+
+

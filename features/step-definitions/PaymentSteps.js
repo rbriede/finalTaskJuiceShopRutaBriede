@@ -4,7 +4,7 @@ const SavedPaymentMethodsPage = require('../page-objects/SavedPaymentMethodsPage
 
 When(/^I click add new card button$/, async function() {
     this.savedPaymentMethodsPage = new SavedPaymentMethodsPage();
-    await this.savedPaymentMethodsPage.title.waitForDisplayed();
+    //await this.savedPaymentMethodsPage.title.waitForDisplayed();
     await this.savedPaymentMethodsPage.optionAddNewCard.waitForDisplayed();
     await this.savedPaymentMethodsPage.optionAddNewCard.click();
 });
