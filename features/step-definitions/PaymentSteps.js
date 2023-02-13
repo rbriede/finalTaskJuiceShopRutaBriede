@@ -1,6 +1,7 @@
 const { When } = require('@wdio/cucumber-framework');
 // const BasePage = require('../page-objects/common/BasePage');
 const SavedPaymentMethodsPage = require('../page-objects/SavedPaymentMethodsPage');
+const OrderSummaryPage = require('../page-objects/OrderSummaryPage');
 
 
 When(/^I click add new card button$/, async function() {
@@ -43,4 +44,10 @@ When(/^I see confirmation message about card info$/, async function() {
     expect(element).toExist();
     await expect(element).toHaveTextContaining("Your card ending with 5678 has been saved for your convenience.");
     await this.savedPaymentMethodsPage.confirmationMessageAboutCardInfo.waitForDisplayed({ reverse: true });
+});
+
+When(/^I place order and pay$/, async function() {
+    this.orderSummaryPage = new OrderSummaryPage();
+    await this.orderSummaryPage.placeYourOrderAndPayButton.waitForDisplayed();
+    await this.orderSummaryPage.placeYourOrderAndPayButton.click();    
 });

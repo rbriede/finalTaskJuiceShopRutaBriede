@@ -9,7 +9,7 @@ class SelectAnAddressPage extends BasketPage {
     }
 
     get selectAnAddressRadioButton() {
-        return browser.$('//span[@class = "mat-radio-outer-circle"]');
+        return browser.$('//mat-radio-button[@class = "mat-radio-button mat-accent"][@id = "mat-radio-40"]');
     }
 
     get buttonAddNewAddress(){
@@ -22,3 +22,10 @@ class SelectAnAddressPage extends BasketPage {
 }
 
 module.exports = SelectAnAddressPage;
+
+
+
+
+
+
+
