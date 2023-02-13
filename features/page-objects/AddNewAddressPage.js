@@ -10,19 +10,19 @@ class AddNewAddressPage extends SavedAddressesPage {
     }
 
     get inputCountry() {
-        return browser.$('//div[@class="mat-form-field-infix ng-tns-c118-7"]');
+        return browser.$('//span[descendant::*[contains(text(),"Country")]]/preceding-sibling::input');
     }
 
     get inputName() {
-        return browser.$('#mat-input-2');
+        return browser.$('//span[descendant::*[contains(text(),"Name")]]/preceding-sibling::input');
     }
 
     get inputMobileNumber() {
-        return browser.$('#mat-input-3');
+        return browser.$('//span[descendant::*[contains(text(),"Mobile")]]/preceding-sibling::input');
     }
 
     get inputZIPCode() {
-        return browser.$('#mat-input-4');
+        return browser.$('//span[descendant::*[contains(text(),"ZIP")]]/preceding-sibling::input');
     }
 
     get inputAddress() {
@@ -30,21 +30,22 @@ class AddNewAddressPage extends SavedAddressesPage {
     }
 
     get inputCity() {
-        return browser.$('#mat-input-6');
+        return browser.$('//span[descendant::*[contains(text(),"City")]]/preceding-sibling::input');
     }
 
     get inputState() {
-        return browser.$('#mat-input-7');
+        return browser.$('//span[descendant::*[contains(text(),"State")]]/preceding-sibling::input');
     }
 
     get buttonSubmit() {
         return browser.$('button#submitButton');
     }
+
+    get confirmationMessageAboutAddressAdded() {
+        return browser.$('//span[contains(@class,"mat-simple-snack-bar-content")]');
+    } 
 }
 
 module.exports = AddNewAddressPage;
 
-//*[@id="address-form"]/mat-form-field[2]/div/div[1]
-
-//span[@class="mat-form-field-infix ng-tns-c118-7"]
 

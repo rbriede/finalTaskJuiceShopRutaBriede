@@ -12,7 +12,7 @@ When(/^I click on new Address button$/, async function() {
 
 When(/^I add address information and submit$/, async function(option) {
     this.addNewAddressPage = new AddNewAddressPage();
-    await this.savedAddressesPage.title.waitForDisplayed();
+    //await this.savedAddressesPage.title.waitForDisplayed();
     await this.addNewAddressPage.inputCountry.waitForDisplayed();
     await this.addNewAddressPage.inputCountry.setValue("United States");
     await this.addNewAddressPage.inputName.waitForDisplayed();
@@ -28,5 +28,7 @@ When(/^I add address information and submit$/, async function(option) {
     await this.addNewAddressPage.inputState.waitForDisplayed();
     await this.addNewAddressPage.inputState.setValue("California");
     await this.addNewAddressPage.buttonSubmit.waitForDisplayed();
-    await this.addNewAddressPage.buttonSubmit.click();    
+    await this.addNewAddressPage.buttonSubmit.click();
+    await this.addNewAddressPage.confirmationMessageAboutCardInfo.waitForDisplayed();
+    await this.addNewAddressPage.confirmationMessageAboutCardInfo.waitForDisplayed({ reverse: true });    
 }); 

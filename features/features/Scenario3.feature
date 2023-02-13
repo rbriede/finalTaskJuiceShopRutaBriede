@@ -23,7 +23,7 @@ Feature: Scenario 3
             | Address       | sunset bv     |
             | City          | Los Angeles   |
             | State         | California    |
-        # And I add 'Best Juice Shop Salesman Artwork' to basket and checkout
+        And I add 'Best Juice Shop Salesman Artwork' to basket and checkout
         # And I choose saved address
         # And I choose 'One day delivery'
         # And I choose saved card
