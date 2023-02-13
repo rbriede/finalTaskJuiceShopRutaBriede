@@ -29,6 +29,6 @@ When(/^I add address information and submit$/, async function(option) {
     await this.addNewAddressPage.inputState.setValue("California");
     await this.addNewAddressPage.buttonSubmit.waitForDisplayed();
     await this.addNewAddressPage.buttonSubmit.click();
-    await this.addNewAddressPage.confirmationMessageAboutCardInfo.waitForDisplayed();
-    await this.addNewAddressPage.confirmationMessageAboutCardInfo.waitForDisplayed({ reverse: true });    
+    await this.addNewAddressPage.confirmationMessageAboutAddressAdded.waitForDisplayed();
+    await this.addNewAddressPage.confirmationMessageAboutAddressAdded.waitForDisplayed({ reverse: true });    
 }); 

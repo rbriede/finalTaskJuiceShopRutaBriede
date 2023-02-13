@@ -39,7 +39,7 @@ class Header {
     }
     
     get searchBar(){
-       return browser.$('#mat-input-0');//.mat-form-field input //in inspect window right click on element and break on modification 
+       return browser.$('#mat-input-0'); 
     }
     
     get logo(){
@@ -85,3 +85,4 @@ class Header {
 
 module.exports = Header;
 
+//button[@id="searchButton"]
