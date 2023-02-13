@@ -60,14 +60,32 @@ When(/^I have logged in$/, async function() {
     await this.basePage.header.buttonAccount.click();
     await this.basePage.header.buttonLogin.waitForDisplayed();
     await this.basePage.header.buttonLogin.click();
-    await browser.url('http://159.223.1.129/#/login');
+    //await browser.url('http://159.223.1.129/#/login');
     await this.loginPage.inputEmail.waitForDisplayed();
     await this.loginPage.inputEmail.setValue("dzindze93@mailinator.com");
     await this.loginPage.inputPassword.waitForDisplayed();
     await this.loginPage.inputPassword.setValue("ppppp");
     await this.loginPage.buttonLogIn.waitForDisplayed();
     await this.loginPage.buttonLogIn.click();
-    await browser.url('http://159.223.1.129/#/search');
+    //await browser.url('http://159.223.1.129/#/search');
+    await this.basePage.header.buttonBasket.waitForDisplayed();
+});
+
+When(/^I have logged in again$/, async function() {
+    this.basePage = new BasePage();
+    this.loginPage = new LoginPage();
+    await this.basePage.header.buttonAccount.waitForDisplayed();
+    await this.basePage.header.buttonAccount.click();
+    await this.basePage.header.buttonLogin.waitForDisplayed();
+    await this.basePage.header.buttonLogin.click();
+    //await browser.url('http://159.223.1.129/#/login');
+    await this.loginPage.inputEmail.waitForDisplayed();
+    await this.loginPage.inputEmail.setValue("dzindze93@mailinator.com");
+    await this.loginPage.inputPassword.waitForDisplayed();
+    await this.loginPage.inputPassword.setValue("pppppp");
+    await this.loginPage.buttonLogIn.waitForDisplayed();
+    await this.loginPage.buttonLogIn.click();
+    //await browser.url('http://159.223.1.129/#/search');
     await this.basePage.header.buttonBasket.waitForDisplayed();
 });
 

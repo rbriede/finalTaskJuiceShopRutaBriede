@@ -2,7 +2,7 @@ Feature: Scenario 3
 
     Scenario: Make a purchase
         Given I open landing page
-        And I have logged in
+        And I have logged in again
         When I press on Account button
         And I click on 'Orders and Payment' option
         And I click on 'My payment Options' option
