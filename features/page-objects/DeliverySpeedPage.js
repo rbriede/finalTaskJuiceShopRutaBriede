@@ -9,7 +9,7 @@ class DeliverySpeedPage extends SelectAnAddressPage {
     }
 
     get selectOneDayDeliveryRadioButton() {
-        return browser.$('//mat-radio-button[@class = "mat-radio-button mat-accent"][@id = "mat-radio-41"]');
+        return browser.$('//mat-radio-button[@class = "mat-radio-button mat-accent"]');
     }
 
     // get selectFastDeliveryRadioButton() {
